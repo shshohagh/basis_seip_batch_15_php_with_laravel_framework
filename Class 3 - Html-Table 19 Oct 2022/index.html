@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class: 3 - Html - Nested Table</title>
+    </head>
+    <body>
+
+        <table border="1" width="600" height="600" align="center">
+            <tr height="100">
+                <td colspan="2" width="600">
+
+                </td>
+            </tr>
+            <tr height="400">
+                <td width="100"></td>
+                <td width="500">
+                    <form>
+                        <table width="400" align="center">
+                            <tr><td>Name:</td><td><input type="text" placeholder="Enter your name" required></td></tr>
+                            <tr><td>Number:</td><td><input type="number" placeholder="Enter your number" required></td></tr>
+                            <tr><td>Email:</td><td><input type="email" placeholder="Enter your email" required></td></tr>
+                            <tr><td>Password:</td><td><input type="password" placeholder="Enter your password" required></td></tr>
+                            <tr><td>Image:</td><td><input type="file" required></td></tr>
+                            <tr><td>Gender:</td><td>
+                                <input type="radio" name="gender" valude="male"> Male
+                                <input type="radio" name="gender" value="female"> Female 
+                            </td></tr>
+                            <tr><td>Button:</td><td><input type="submit" value="Button"></td></tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+            <tr height="100">
+                <td colspan="2" width="600">
+                    
+                </td>
+            </tr>
+        </table>
+
+<!--Table 1 / Start-->
+        <table hidden border="1" width="700" height="800" align="center">
+            <tr height="100">
+                <td width="100"></td>
+                <td width="600"></td>
+            </tr>
+            <tr height="80">
+                <td colspan="2">
+                    <!--Table 2 / Start-->
+                    <table border="1" height="80" width="700">
+                        <tr height="80">
+                            <td width="200"></td>
+                            <td width="300"></td>
+                            <td width="200"></td>
+                        </tr>
+                    </table>
+                    <!--Table 2 / End-->
+                </td>
+            </tr>
+            <tr height="600">
+                <td colspan="2" width="700">
+                    <!--Table 3 / Start-->
+                    <table border="1" width="700" height="600">
+                        <tr height="600">
+                            <td width="100"></td>
+                            <td width="600">
+                                <!--Table 4 / Start-->
+                                <table border="1" width="600" height="600">
+                                    <tr height="300">
+                                        <td width="300"></td>
+                                        <td width="300"></td>
+                                    </tr>
+                                    <tr height="300"><td colspan="2">
+                                        <!--Table 5 / Start-->
+                                        <table border="0" width="600" height="300">
+                                            <tr height="300">
+                                                <td width="200"></td>
+                                                <td width="200"></td>
+                                                <td width="200"></td>
+                                            </tr>
+                                        </table>
+                                        <!--Table 5 / End-->
+                                    </td></tr>
+                                </table>
+                                <!--Table 4 / End-->
+                            </td>
+                        </tr>
+                    </table>
+                    <!--Table 3 / End-->
+                </td>
+            </tr>
+            <tr height="20">
+                <td colspan="2"></td>
+            </tr>
+        </table>
+<!--Table 1 / End-->
+
+<!--         <table border="1" bordercolor="red" height="600" width="500" align="center">
+            <tr height="100">
+                <td width="150" align="center">--w150--</td>
+                <td  width="350" align="center">--w350--</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table border="1"  bordercolor="green" height="400" width="500">
+                        <tr>
+                            <td width="100"  align="center">w100<br>h400</td>
+                            <td  width="400" align="center">
+                                <table border="1"  bordercolor="blue" height="400" width="400">
+                                    <tr height="200">
+                                        <td width="100" align="center">--w200--</td>
+                                        <td width="100" align="center">--w200--</td></tr>
+                                    <tr height="200"><td width="200" align="center" colspan="2">
+                                        <table border="1" bordercolor="black" height="200" width="400">
+                                            <tr>
+                                                <td width="100" align="center">--w100--</td>
+                                                <td width="200" align="center">--w200--</td>
+                                                <td width="100" align="center">--w100--</td>
+                                            </tr>
+                                        </table>
+                                    </td></tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr height="100">
+                <td colspan="2" width="500"  align="center">--w500--</td>
+            </tr>
+        </table> -->
+
+    </body>
+</html>
