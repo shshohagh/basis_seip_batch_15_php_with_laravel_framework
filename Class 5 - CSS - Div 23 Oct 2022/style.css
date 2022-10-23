@@ -1,7 +1,125 @@
 body{
-    background-color: yellowgreen;
+    background-color: ;
 }
-h1{
+/* h1{
     font-size: large;
     color: tomato;
+}
+.box-one{
+    height: 500px;
+    width: 500px;
+    background-color: green;
+    
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    
+    padding-top: 50px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    float: left;
+
+}
+.box-two{
+    height: 500px;
+    width: 500px;
+    background-color: blue;
+    float: left;
+} */
+.flagbar{
+    height: 900px ;
+    width: 50px;
+    float: left;
+    background-color: rgb(163, 58, 58);
+    border-radius: 10px 10px 0px 0px;
+    position: relative;
+    left: 10px;
+}
+.roshi{
+    height: 10px;
+    width:30px;
+    float:left;
+}
+.roshi1{
+    height: 10px;
+    width:30px;
+    float:left;
+    background-color: black;
+    position: relative;
+    top: 110px;
+}
+.roshi2{
+    height: 10px;
+    width:30px;
+    float:left;
+    background-color: black;
+    position: relative;
+    top: 270px;
+}
+.area{
+    height: 300px;
+    width: 600px;
+    float: left;
+    background-color: green;
+
+    position: relative;
+    top: 50px;
+    left: 0px;
+}
+.circle{
+    height: 180px;
+    width: 180px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+    left: 210px;
+}
+.base1{
+    height: 50px;
+    width: 200px;
+    background-color: brown;
+    position: relative;
+    top: 900px;
+    left: 0px;
+}
+.base2{
+    height: 50px;
+    width: 300px;
+    background-color: brown;
+    position: relative;
+    top: 901px;
+    left: 0px;
+}
+.base3{
+    height: 50px;
+    width: 400px;
+    background-color: brown;
+    position: relative;
+    top: 903px;
+    left: 0px;
+}
+.area-2{
+    height: 500px;
+    width: 1100px;
+    border: 1px solid red;
+    position: relative;
+    top: 10px;
+    z-index: 2;
+    background: url(image/bitm-slider.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    overflow: scroll;
+}
+.area-3{
+    border-top: 10px solid red;
+    height: 500px;
+    width: 400px;
+    background-color: blueviolet;
+    position: relative;
+    top: 20px;
 }
