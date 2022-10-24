@@ -50,17 +50,58 @@
     float: left;
 }
 .row-3{
-    height: 700px;
+    height: 800px;
     border-bottom: 1px dashed red;
 }
 .sidebar{
-    height: 700px;
+    height: 800px;
     border-right: 1px solid red;
 }
-.main-contain{
-    height: 700px;
+.left-sidebar{
+    height: 800px;
+    border-right: 1px solid red;
     float: left;
-    
+}
+.main-contain{
+    height: 800px;
+    float: left;
+    border-right: 1px solid red;
+}
+.right-sidebar{
+    height: 800px;
+    float: left;
+}
+.mc-row-1{
+    height:150px;
+    border-bottom: 1px solid red;
+}
+.mcr1-col61{
+    height: 150px;
+    border-right: 1px solid red;
+}
+.mc-row-2{
+    height: 500px;
+    border-bottom: 1px solid red;
+}
+.mcr2-col1{
+    height: 500px;
+    border-right: 1px solid red;
+    float: left;
+}
+.mcr2-col2{
+    height: 500px;
+    border-right: 1px solid red;
+    float: left;
+}
+.mcr2-r1{
+    height: 250px;
+    border-bottom: 1px solid red;
+}
+.mcr2-r2{
+    height: 250px;
+}
+.mc-row-3{
+    height:100px;
 }
 .row-4{
     height: 50px;
