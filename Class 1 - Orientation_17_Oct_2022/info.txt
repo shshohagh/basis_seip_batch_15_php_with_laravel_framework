@@ -13,3 +13,4 @@ Institute    : BASIS Institute of Technology and Management -BITM
 
 Contact Number  : +880 9612442087
 Emergency Leave : foysal1208@gmail.com
+cc		: cic.basis.seip@gmail.com
