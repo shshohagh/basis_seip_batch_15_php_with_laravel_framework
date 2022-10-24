@@ -8,7 +8,7 @@ Session     : January 2021 to December 2022
 Course Name : PHP with Laravel Framework
 Duration    : 3 month/240 hours (4 hours a day, 5 days in week)
 
-Watch the   : Professional communication skills development
+WASDA   : Professional communication skills development
 Institute    : BASIS Institute of Technology and Management -BITM  
 
 Contact Number  : +880 9612442087
