@@ -1,0 +1,16 @@
+div{
+    border: 1px solid salmon;
+}
+.table{
+    display: table;
+    margin: auto;
+}
+.row{
+display: table-row;
+}
+.col{
+display: table-cell;
+height: 50px;
+text-align: center;
+padding: 15px;
+}
