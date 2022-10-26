@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../image/banner.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.menu-bar{
+    background-color: purple;
+    text-align: center;
+}
+.menu-bar ul{
+    list-style: none;
+    display: inline-flex;
+}
+.menu-bar ul li{
+    margin: 20px;
+    padding: 20px;
+}
+.active, .menu-bar ul li:hover{
+   background-color: green;
+   border-radius: 5px; 
+}
+.active, .menu-bar ul li:hover a{
+    color: black;
+    border-radius: 5px; 
+ }
+.menu-bar ul li a{
+    color: #fff; 
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 36px;
+}
+/* capitalize, uppercase */
+.sub-menu-1{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -30px;
+    background-color: rgba(84, 31, 31, 0.488);
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 300px;
+    padding: 10px;
+    border-bottom: 2px dotted white;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a{
+    color: #fff;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+.sub-menu-2{
+    display: none;
+}
+.hover-me:hover .sub-menu-2{
+    display: block;
+    position: absolute;
+    margin: 270px;
+    margin-top: -70px;
+    background-color: rgba(84, 31, 31, 0.488);
+}
+.hover-me:hover .sub-menu-2 ul{
+    width: 300px;
+}
+.hover-me:hover .sub-menu-2 ul li{
+    
+}
+.hover-me:hover .sub-menu-2 ul li a{
+    color: #fff;
+}
