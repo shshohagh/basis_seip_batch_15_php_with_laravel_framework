@@ -43,7 +43,7 @@ body{
     display: block;
     position: absolute;
     margin-top: 15px;
-    margin-left: -30px;
+    margin-left: -25px;
     background-color: rgba(84, 31, 31, 0.488);
 }
 .menu-bar ul li:hover .sub-menu-1 ul{
@@ -70,12 +70,6 @@ body{
     margin: 270px;
     margin-top: -70px;
     background-color: rgba(84, 31, 31, 0.488);
-}
-.hover-me:hover .sub-menu-2 ul{
-    width: 300px;
-}
-.hover-me:hover .sub-menu-2 ul li{
-    
 }
 .hover-me:hover .sub-menu-2 ul li a{
     color: #fff;

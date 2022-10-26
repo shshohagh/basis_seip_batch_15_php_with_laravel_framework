@@ -1,0 +1,9 @@
+.menu ul li{
+width: 120px;
+text-align: center;
+}
+.active{
+    background-color: red;
+    border-radius: 5px;
+    
+}
