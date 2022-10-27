@@ -1,0 +1,18 @@
+.header{
+    box-shadow: 0px 1px 0px 0px rgba(154, 50, 50, 0.557);
+}
+.menu ul li{
+    width: 100px;
+    text-align: center;
+    font-size: 26px;
+    margin: 25px;
+}
+.carousel{
+    box-shadow: 0px 10px 0px 0px rgba(154, 50, 50, 0.557);
+}
+.carousel-img img{
+height: 500px;
+}
+.card:hover{
+    box-shadow: 0px 10px 0px 0px rgba(154, 50, 50, 0.557);
+}
