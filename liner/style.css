@@ -1,0 +1,52 @@
+body{
+    background: linear-gradient(rgb(76, 124, 205), rgb(69, 214, 305));
+}
+.nr1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgb(63, 115, 204), rgb(74, 79, 161));
+    gap: 10px;
+}
+.box{
+    box-shadow: rgba(0, 0, 0, 0.403) 0px 10px 20px;
+    padding: 2rem;
+    border-radius: 2rem;
+    background: white;
+    display: flex;
+
+    overflow: auto;
+    resize: both;
+}
+p{
+    max-width: 25rem;
+    padding: 1rem 0rem;
+}
+.box h2{
+    writing-mode: vertical-lr;
+}
+.box img{
+    width: 100%;
+    transform: scaleX(-1);
+}
+html{
+    scroll-behavior: smooth;
+}
+h1{
+    margin: auto;
+    font-size: 10rem;
+    background: linear-gradient(to right, rgb(67, 124, 205),  rgb(150, 67, 205), rgb(69, 202, 140));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fade 1s ease-in 1s;
+    pointer-events: none;
+    opacity: o;
+}
+@keyframes fade {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.card h3{
+    margin-top: 25px;
+}

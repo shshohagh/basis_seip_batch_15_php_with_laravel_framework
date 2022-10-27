@@ -1,0 +1,48 @@
+body{
+    background: linear-gradient(rgb(76, 124, 205),  rgb(74, 79, 161));
+}
+.nr1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgb(63, 115, 204), rgb(74, 79, 161));
+    gap: 10px;
+}
+.container{
+    width: 20rem;
+    height: 20rem;
+    background: white;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+}
+/* scroll-snap-type: x mandatory; x mandatory x proximity */
+.container div{
+    min-width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    color: white;
+}
+.box1{
+    background-color: blueviolet;
+    font-size: 36px;
+}
+.box2{
+    background-color: blue;
+    font-size: 36px;
+}
+.box3{
+    background-color: burlywood;
+    font-size: 36px;
+}
+.box4{
+    background-color: blueviolet;
+    font-size: 36px;
+}
+.box5{
+    background-color: blue;
+    font-size: 36px;
+}
