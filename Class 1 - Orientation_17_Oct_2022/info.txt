@@ -7,6 +7,7 @@ Project Name: BASIS-SEIP Tranche-3
 Session     : January 2021 to December 2022
 Course Name : PHP with Laravel Framework
 Duration    : 3 month/240 hours (4 hours a day, 5 days in week)
+Class       : 60
 
 WASDA   : Professional communication skills development
 Institute    : BASIS Institute of Technology and Management -BITM  
