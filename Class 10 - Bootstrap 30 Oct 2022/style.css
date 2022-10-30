@@ -130,7 +130,7 @@ nav{
 }
 .exclusive .col:hover .layer::after{
     content: " ";
-    background-color: red;
+    background-color: black;
     height: 130px;
     width: 100%;
     position: absolute;
