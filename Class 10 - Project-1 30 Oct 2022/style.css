@@ -8,7 +8,7 @@
 .container{
     width: 1200px !important;
 }
-/*
+
 body{
     display: flex;
 	justify-content: center;
@@ -17,7 +17,7 @@ body{
 	flex-direction: column;
 	background: #23242a;
 }
-*/
+
 .header{
     height: 100vh;
     width: 100%;
@@ -106,7 +106,7 @@ nav{
     margin: 50px 0px 20px;
     font-size: 2.2vw;
     font-weight: 500;
-    color: #333;
+    color: #fff;
 }
 .exclusive div img{
     border-radius: 10px;
@@ -137,4 +137,100 @@ nav{
     z-index: 2;
     opacity: .3;
     border-radius: 10px;
+}
+.trending img{
+    border-radius: 10px;
+}
+.trending img:hover{
+    border: 1px solid #ff5861;
+}
+.trending span{
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: 20px;
+    display: block;
+}
+/*--------------------Call to action----------------------*/
+.call-to-action{
+    margin-left: 80px 0;
+    background-image: linear-gradient(to right, #3f2321, transparent), url(images/banner-2.png);
+    background-size: cover;
+    background-position: center;
+    padding: 5%;
+    color: #fff;
+    width: 100%;
+}
+.call-to-action h3{
+    font-weight: 500;
+    font-size: 4vw;
+    line-height: 5vh;
+}
+.call-to-action-btn{
+    background-color: rgb(126, 64, 64);
+    color: #fff;
+    padding: 12px 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+.call-to-action-btn:hover{
+    color: #fff;
+    background-color: red;
+    transition: .5s;
+}
+.travellers-stories img{
+    border-radius: 10px;
+    width: 100%;
+}
+.travellers-stories div{
+    position: relative;
+}
+.travellers-stories span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    z-index: 3;
+    display: none;
+}
+.travellers-stories .col:hover span{
+    display: block;
+}
+.travellers-stories .col:hover .layer::after{
+    content: " ";
+    background-color: black;
+    height: 375px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    opacity: .3;
+    border-radius: 10px;
+}
+.footer{
+    text-align: center;
+    color: #fff;
+}
+.footer hr{
+    height: 5px;
+    background-color: #ff5861;
+}
+.social-icon i{
+    background-color: rgb(81, 44, 44);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: wheat;
+    line-height: 50px;
+}
+.social-icon i:hover{
+    background-color: red;
+    transition: 1s;
+    box-shadow: 0px 5px 1px 0px rgb(120, 54, 54);
+}
+.bitm{
+    text-decoration: none;
+    color: #fff;
 }
