@@ -181,6 +181,7 @@ nav{
 }
 .travellers-stories img{
     border-radius: 10px;
+	height: 375px;
     width: 100%;
 }
 .travellers-stories div{
@@ -217,6 +218,12 @@ nav{
     height: 5px;
     background-color: #ff5861;
 }
+.social-icon{
+	margin: auto;
+}
+.social-icon a{
+	margin-right: 10px;
+}
 .social-icon i{
     background-color: rgb(81, 44, 44);
     height: 50px;
@@ -228,7 +235,6 @@ nav{
 .social-icon i:hover{
     background-color: red;
     transition: 1s;
-    box-shadow: 0px 5px 1px 0px rgb(120, 54, 54);
 }
 .bitm{
     text-decoration: none;
