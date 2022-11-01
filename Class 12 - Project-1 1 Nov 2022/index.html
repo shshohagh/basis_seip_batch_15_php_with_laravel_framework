@@ -11,7 +11,7 @@
         <section class="header">
             <div class="container">
                 <div class="row">
-                    <nav>
+                    <nav id="navbar">
                         <a href="index.html"><img src="images/logo.png" alt="logo" class="logo"></a>
                             <ul class="nav-links">
                                 <li><a href="">Popular place</a></li>
@@ -19,6 +19,7 @@
                                 <li><a href="">Online Packages</a></li>
                             </ul>
                             <a href="" class="registration-btn">Registration</a>
+                            <i class="fa-solid fa-bars" onclick="btn();"></i>
                     </nav>
                 </div>
                 <div class="row">
@@ -140,6 +141,10 @@
             </div>
         </section>
 
+        <script>
+           var navbar = document.getElementById('navbar');
+           function btn(){  navbar.classList.toggle('hidemenu');    }
+        </script>
         <script src="../bootstrap/js/bootstrap.bundle.js"></script>
     </body>
 </html>
