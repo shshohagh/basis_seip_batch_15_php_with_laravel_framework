@@ -299,5 +299,31 @@ nav .fa-bars{
     .hidemenu{
         max-height: 400px;
     }
+    .header h1{
+        padding-top: 50px;
+        font-size: 7vw;
+    }
+    .search-box{
+        width: 90%;
+        margin: 30px auto;
+        padding: 20px 10px 30px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .search-box form{
+        display: block;
+    }
+    .search-box form input{
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        margin: 10px 0 20px;
+        padding-bottom: 10px;
+    }
+    .search-box form button{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
 
 }
