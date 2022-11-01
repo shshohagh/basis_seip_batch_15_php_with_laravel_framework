@@ -249,6 +249,7 @@ nav{
 nav .fa-bars{
     display: none;
 }
+
 /*------------------small device---------------------*/
 
 @media (max-width:700px){
@@ -325,5 +326,20 @@ nav .fa-bars{
         left: 50%;
         transform: translate(-50%, 50%);
     }
+    .exclusive .col img{
+        min-width: 155px;
+        margin-top: 10px;
+    }
+    .exclusive .col:hover .layer::after{
+        margin-top: 10px;
+    }
+    .travellers-stories .col img{
+        min-width: 245px;
+        margin-top: 10px;
+    }
+    .travellers-stories .col:hover .layer::after{
+        margin-top: 10px;
+    }
+
 
 }
