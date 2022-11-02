@@ -216,6 +216,67 @@ nav{
     opacity: .3;
     border-radius: 10px;
 }
+/*----------------------Readmore Start------------------------*/
+.readmore a{
+   position: relative;
+   display: inline-block;
+   font-size: 1em;
+   font-weight: 600;
+   letter-spacing: 0.1em;
+   color: #fff;
+   text-decoration: none;
+   text-transform: capitalize;
+   background: #DE463B;
+   border-radius: 25px;
+   border: 2px solid #DE463B;
+   padding: 10px 30px;
+
+   z-index: 1;
+   overflow: hidden;
+   transition: 1s;
+}
+.readmore a:hover{
+    transition-delay: 0s,1s;
+    color: black;
+}
+.readmore a:hover span{
+    color: #fff;
+}
+.readmore a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -79px;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 1s;
+}
+.readmore a:hover::before{
+    width: 100%;
+}
+/*----------------------Readmore End------------------------*/
+.social-icon{
+	margin: auto;
+}
+.social-icon a{
+	margin-right: 10px;
+}
+.social-icon i{
+    background:#ddd;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: black;
+    line-height: 50px;
+}
+.social-icon i:hover{
+    background-color: red;
+    color: white;
+    transition: 400ms;
+}
 .footer{
     text-align: center;
     color: black;
@@ -224,24 +285,108 @@ nav{
     height: 5px;
     background-color: #ff5861;
 }
-.social-icon{
-	margin: auto;
+
+/*------------------------Social Start-----------------------------*/
+
+.social{
+    display: inline-flex;
 }
-.social-icon a{
-	margin-right: 10px;
+.social .icon{
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
-.social-icon i{
-    background-color: rgb(81, 44, 44);
-    height: 50px;
-    width: 50px;
+.social .icon span{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: block;
+    background: #fff;
+    text-align: center;
     border-radius: 50%;
-    color: white;
-    line-height: 50px;
+    z-index: 2;
+    box-shadow: 0 10px 10px rgba(0,0,0,.1);
 }
-.social-icon i:hover{
-    background-color: red;
-    transition: 1s;
+.social .icon span i{
+    font-size: 25px;
+    line-height: 60px;
 }
+.social .icon .tooltip{
+    position: absolute;
+    top: 0px;
+    background: #fff;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0,0,0,.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.social .icon:hover .tooltip{
+    opacity: 1;
+    top: -70px;
+    pointer-events: auto;
+}
+.social .icon .tooltip::before{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.social .icon:hover span{
+    color: #fff;
+}
+.social .icon:hover span,
+.social .icon:hover .tooltip
+{
+    text-shadow: 0px -1px 0px rgba(0,0,0,.4);
+}
+.social .facebook:hover span,
+.social .facebook:hover .tooltip,
+.social .facebook .tooltip::before
+{
+    background: #3B5999;
+}
+.social .twitter:hover span,
+.social .twitter:hover .tooltip,
+.social .twitter .tooltip::before
+{
+    background: #46C1F6;
+}
+.social .instagram:hover span,
+.social .instagram:hover .tooltip,
+.social .instagram .tooltip::before
+{
+    background: #e1306c;
+}
+.social .github:hover span,
+.social .github:hover .tooltip,
+.social .github .tooltip::before
+{
+    background: #333;
+}
+.social .youtube:hover span,
+.social .youtube:hover .tooltip,
+.social .youtube .tooltip::before
+{
+    background: #DE463B;
+}
+
+/*------------------------Social End-----------------------------*/
+
 .bitm{
     text-decoration: none;
     color: black;
