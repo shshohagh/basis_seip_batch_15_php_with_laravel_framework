@@ -423,6 +423,11 @@ nav .fa-bars{
 .house img{
     margin: 8% 5%;    
 }
+.house-content a{
+    text-decoration: none;
+    color: #ff5861;
+    font-weight: 600;
+}
 .list .house h3{
     font-size: 22px;
     font-weight: 600;
@@ -465,6 +470,56 @@ nav .fa-bars{
 .sidebar span{
     position: relative;
     top: -22px;
+}
+/*----------------------List > Details Page------------------------------*/
+.gallery img{
+    border-radius: 10px;
+}
+.description{
+    position: relative;
+}
+.description p{
+    text-align: justify;
+}
+.description span{
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.description span:last-child{
+    font-weight: 700;
+    color: #ff5861;
+    position: absolute;
+    right: 1%;
+}
+.details-page .search-box{
+    box-shadow: 0 0 10px black;
+}
+.details-page .search-box form button{
+    width: 190px;
+    border-radius: 26px;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    flex: 1;
+}
+.facilities h5{
+
+}
+.facilities i{
+margin-right: 15px;
+}
+.facilities p{
+    padding: 0px 45px;
+}
+.booking{
+    position: relative;
+}
+.booking .info{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
 }
 
 /*------------------small device---------------------*/
