@@ -534,6 +534,7 @@ margin-right: 15px;
     nav{
         position: fixed;
         top: 0;
+        left: 0;
         display: inline-block;
         background-color: #000;
         z-index: 4;
@@ -631,6 +632,17 @@ margin-right: 15px;
     .list{
         padding-top: 75px;
     }
-
+    /* --------------------------Details Page---------------------- */
+    .details-page .container{
+        margin-top: 15%;
+    }
+    .details-page .container .sub-title{
+        font-size: 26px;
+    }
+    .booking .info{
+        position: absolute;
+        bottom: 10px;
+        right: -25%;
+    }
 
 }
