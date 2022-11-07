@@ -1,0 +1,24 @@
+#To Composer Install in Mac OS
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+sudo mkdir /usr/local/log
+sudo mkdir /usr/local/log/php
+sudo chgrp -R staff /usr/local/log/php
+sudo chmod -R ug+w /usr/local/log/php/
+brew install php@8.1
+brew services restart php
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+sudo mv composer.phar /usr/local/bin/composer
+
+
+#class-15, #class-16
+app/classes/Hello.php
+asset
+pages
+composer.json
+index.php
+
+#RUN
+composer dump-autoload

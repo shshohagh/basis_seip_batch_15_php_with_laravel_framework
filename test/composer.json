@@ -1,0 +1,16 @@
+{
+    "name":"test/test",
+    "type":"project",
+    "description": "a simple project",
+
+    "keywords": [],
+    "license": "",
+
+    "require": {},
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "App\\":"app//"
+        }
+    }
+}
