@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 1200px !important;
+}
+.header-top{
+    background-color: #00f;
+    color: #fff;
+}
+.header-top-left ul{
+ margin-bottom: 0px;
+}
+.header-top-left ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+.header-top .right{
+    color: #fff;
+}
+.header-top-right i{
+    padding-right: 5px;
+}
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/header/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.header .welcome{
+    padding-top: 300px;
+}
+.header .welcome i{
+    font-size: 20px;
+    padding: 10px;
+}
+.header .welcome a{
+    text-decoration: none;
+}
+.header .title{
+    font-weight: 600;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+}
+.nav li{
+    position: relative;
+    right: 1px;
+    text-align: justify;
+    color: #000;
+    font-weight: 600;
+}
+.navbar-brand{
+    text-align: justify;
+}
+.navbar-collapse{
+    text-align: justify;
+}
+.services-card{
+    padding-top: 10px;
+}
+.services-card i{
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: #00f;
+}
+.about{
+    padding-top: 50px;
+    background-color: aliceblue;
+}
+.about .left{
+    text-align: center;
+}
+.about button{
+
+}
+.about .right i{
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #00f;
+    font-size: 20px;
+line-height: 1em;
+}
+.client{
+    background-color: aliceblue;
+}
+.client img{
+    padding: 25px;
+    width: 80%;
+}
+.services{
+    padding-top: 50px;
+    text-align: center;
+}
+.services .top{
+    text-align: center;
+}
+.services .top button{
+    border-radius: 20px;
+}
+.services .card i{
+    background-color: aliceblue;
+    border-radius: 12px;
+    font-size: 40px;
+    color: #00f;
+    padding: 20px;
+}
+.slider{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url('../images/testimonial/testimonials-bg.jpg');
+}
+.slider img{
+    
+    width: 10%;
+    border: 20px transparent gray;
+    border-radius: 50%;
+}
+.team{
+    padding-top: 50px;
+}
