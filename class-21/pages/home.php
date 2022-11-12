@@ -1,5 +1,5 @@
 <?php require_once('header.php');?>
-    <section class='mt-5 d-none'>
+    <section class='mt-5 d-block'>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

@@ -5,19 +5,27 @@ use App\classes\Category;
 use App\classes\Product;
 
 if(isset($_GET['page'])){
-    if($_GET['page']=='home'){
-        $page_name=$_GET['page'];
+    $page_name=$_GET['page'];
 
+    $category =new Category();
+    $categories= $category->allCategory();
+
+    if($page_name=='Home'){      
         $student =new Student();
         $students= $student->index();
-
-        $category =new Category();
-        $categories= $category->allCategory();
-
+        include('pages/home.php');
+    }elseif($page_name=='Products'){
         $product =new Product();
         $products= $product->allProduct();
-        
-        include('pages/home.php');
+        include('pages/products.php');
+    }elseif($page_name=='Category'){
+        $product =new Product();
+        $products= $product->allProduct();
+        include('pages/categoryProduct.php');
+    }elseif($page_name=='About'){
+        include('pages/about.php');
+    }else{
+        include('pages/404.php');
     }
 }
 
