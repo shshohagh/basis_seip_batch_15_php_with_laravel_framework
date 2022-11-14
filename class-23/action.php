@@ -1,13 +1,21 @@
 <?php
 require_once('vendor/autoload.php');
+/**
+ * Model
+ */
 use App\classes\Category;
 use App\classes\Product;
 use App\classes\Brand;
 
 if(isset($_GET['page'])){
+    /**
+     * Global veriable
+     */
     $page_name=$_GET['page'];
     $id=$_GET['id'];
-
+/**
+ * Global 
+ */
     $product =new Product();
     $products= $product->products();
 
@@ -16,8 +24,14 @@ if(isset($_GET['page'])){
 
     $brand =new Brand();
     $brands= $brand->brands();
-
-    if($page_name=='Home'){      
+/**
+ * Route And Controller
+ */
+    if($page_name=='Home'){ /** Dashboard */   
+        $dashboard_products=count($products);   
+        $dashboard_brands=count($brands);   
+        $dashboard_categories=count($categories);  
+        $products=$product->home();
         include('pages/home.php');
 
     }elseif($page_name=='Products'){
@@ -30,13 +44,13 @@ if(isset($_GET['page'])){
     }elseif($page_name=='Orders'){
         include('pages/order.php');
         
-    }elseif($page_name=='Categories'){
+    }elseif($page_name=='Categories'){ /** Products By Category */
         $products=$product->categoryProduct($id);
         $category=$category->categoryName($id);
         $categoryName=$category['name'];
         include('pages/productByCategory.php');
 
-    }elseif($page_name=='Brands'){
+    }elseif($page_name=='Brands'){  /** Products By Brand */
         $products=$product->brandProduct($id);
         $brand=$brand->brandName($id);
         $brandName=$brand['name'];

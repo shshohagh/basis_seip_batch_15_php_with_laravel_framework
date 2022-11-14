@@ -23,6 +23,19 @@ class Product{
           13=>['id'=>14,'categoryId'=>3,'brandId'=>1, 'name'=>'Mens Drop | Life','price'=>'550','image'=>'d5.webp','description'=>'Mens Drop | Red'],
         ];
     }
+    public function home(){
+        $products= $this->products();
+        foreach($products as $product){
+                $categories=new Category();          
+                $categoryName=$categories->categoryName($product['categoryId']);
+                $product['categoryName']=$categoryName['name'];
+                $brands=new Brand();
+                $brandName=$brands->brandName($product['brandId']);
+                $product['brandName']=$brandName['name'];
+                array_push($this->res, $product);
+        }
+        return $this->res;
+    }
     public function details($id){
         $products= $this->products();
         foreach($products as $product){

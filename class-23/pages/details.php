@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="row">
-                <h2>Releted Products</h2>
+                <h2>Related Products</h2>
                 <div class="col-md-2">
                     <div class="card">
                         <img src="asset/images/1.webp" class='img-fluid' alt="" srcset="">
