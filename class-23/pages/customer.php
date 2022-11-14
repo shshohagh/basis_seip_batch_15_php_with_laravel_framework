@@ -4,25 +4,25 @@
             <div class="row">
             <h6 class='card border-primary p-3 mb-4'><?php echo $page_name;?></h2>
                 <div class="col-md-12 table-responsive">
-                    <table class="table table-hover table-striped">
-                        <tr class='table-info'>
+                <table class="table table-bordered table-hover table-striped">
+                        <tr class='table-mute'>
+                            <th>Photo</th>
                             <th>Name</th>
-                            <th>Mobile</th>
-                            <th>Email</th>
-                            <th>Total Order</th>
+                            <th>Brand</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Price</th>
                         </tr>
-                        
-                        <tr><td>Customer1</td><td>017284084094</td><td>customer1@gmail.com</td><td>12</td></tr>
-                        <tr><td>Customer2</td><td>017284084094</td><td>customer1@gmail.com</td><td>12</td></tr>
-                        <tr><td>Customer3</td><td>017284084094</td><td>customer1@gmail.com</td><td>12</td></tr>
-                        <tr><td>Customer4</td><td>017284084094</td><td>customer1@gmail.com</td><td>12</td></tr>
-                        <tr><td>Customer5</td><td>017284084094</td><td>customer1@gmail.com</td><td>12</td></tr>
-                        <tr><td>Customer6</td><td>017284084094</td><td>customer1@gmail.com</td><td>12</td></tr>
-                        <tr><td>Customer7</td><td>017284084094</td><td>customer1@gmail.com</td><td>12</td></tr>
-                        <tr><td>Customer8</td><td>017284084094</td><td>customer1@gmail.com</td><td>12</td></tr>
-                        <tr><td>Customer9</td><td>017284084094</td><td>customer1@gmail.com</td><td>12</td></tr>
-                        <tr><td>Customer10</td><td>017284084094</td><td>customer1@gmail.com</td><td>12</td></tr>
-                        
+                        <?php foreach($products as $index=>$product){  ?>
+                        <tr>
+                            <td><img src="asset/images/<?php echo $product['image']; ?>" width='50' alt="" class='img-fluid rounded-circle'></td>
+                            <td><?php echo $product['name']; ?></td>
+                            <td><?php echo $product['brandName']; ?></td>
+                            <td><?php echo $product['categoryName']; ?></td>
+                            <td><?php echo $product['description']; ?></td>
+                            <td><?php echo $product['price']; ?></td>
+                        </tr>
+                        <?php }  ?>
                     </table>
                 </div>
             </div>

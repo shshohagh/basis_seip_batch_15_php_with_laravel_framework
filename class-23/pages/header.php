@@ -167,7 +167,7 @@
             <li class="dropdown">
             <?php $pageLabel='Brands'; ?>
                                 <a href="" class="nav-link  <?php if($page_name==$pageLabel){echo'text-white';}else{echo'text-secondary';}?> dropdown-toggle" data-bs-toggle='dropdown'>
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>    
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#calendar3"/></svg>    
                                 <?php echo $pageLabel; ?>  
                               </a>
                                 <ul class="dropdown-menu">
@@ -178,11 +178,71 @@
                             </li>
             <li>
             <?php $pageLabel='Customer'; ?>
-              <a href="action.php?page=<?php echo $pageLabel; ?>" class="nav-link  <?php if($page_name==$pageLabel){echo'text-white';}else{echo'text-secondary';}?>">
+              <a href="action.php?page=<?php echo $pageLabel; ?>" class="nav-link <?php if($page_name==$pageLabel){echo'text-white';}else{echo'text-secondary';}?>">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
                 <?php echo $pageLabel; ?>
               </a>
             </li>
+            <li class='dropdown'>
+            <?php $pageLabel='collection'; ?>
+              <a href="action.php?page=<?php echo $pageLabel; ?>" class="nav-link  <?php if($page_name==$pageLabel){echo'text-white';}else{echo'text-secondary';}?> dropdown-toggle" data-bs-toggle='dropdown'>
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#collection"/></svg>
+                <?php echo $pageLabel; ?>
+              </a>
+              <ul class="dropdown-menu bg-dark text-center">
+              <li>
+            <?php $pageLabel='chat-qoute-fill'; ?>
+              <a href="action.php?page=<?php echo $pageLabel; ?>" class="dropdown-item  <?php if($page_name==$pageLabel){echo'text-white';}else{echo'text-secondary';}?>">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#chat-quote-fill"/></svg>
+                <?php echo $pageLabel; ?>
+              </a>
+            </li>
+            <li>
+            <?php $pageLabel='cpu-fill'; ?>
+              <a href="action.php?page=<?php echo $pageLabel; ?>" class="dropdown-item  <?php if($page_name==$pageLabel){echo'text-white';}else{echo'text-secondary';}?>">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#cpu-fill"/></svg>
+                <?php echo $pageLabel; ?>
+              </a>
+            </li>
+            <li>
+            <?php $pageLabel='gear-fill'; ?>
+              <a href="action.php?page=<?php echo $pageLabel; ?>" class="dropdown-item  <?php if($page_name==$pageLabel){echo'text-white';}else{echo'text-secondary';}?>">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#gear-fill"/></svg>
+                <?php echo $pageLabel; ?>
+              </a>
+            </li>
+            <li>
+            <?php $pageLabel='toggles2'; ?>
+              <a href="action.php?page=<?php echo $pageLabel; ?>" class="dropdown-item  <?php if($page_name==$pageLabel){echo'text-white';}else{echo'text-secondary';}?>">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#toggles2"/></svg>
+                <?php echo $pageLabel; ?>
+              </a>
+            </li>
+            <li>
+            <?php $pageLabel='tools'; ?>
+              <a href="action.php?page=<?php echo $pageLabel; ?>" class="dropdown-item  <?php if($page_name==$pageLabel){echo'text-white';}else{echo'text-secondary';}?>">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#<?php echo $pageLabel; ?>"/></svg>
+                <?php echo $pageLabel; ?>
+              </a>
+            </li>
+            <li>
+            <?php $pageLabel='chevron-right'; ?>
+              <a href="action.php?page=<?php echo $pageLabel; ?>" class="dropdown-item  <?php if($page_name==$pageLabel){echo'text-white';}else{echo'text-secondary';}?>">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#<?php echo $pageLabel; ?>"/></svg>
+                <?php echo $pageLabel; ?>
+              </a>
+            </li>
+            <li>
+            <?php $pageLabel='geo-fill'; ?>
+              <a href="action.php?page=<?php echo $pageLabel; ?>" class="dropdown-item  <?php if($page_name==$pageLabel){echo'text-white';}else{echo'text-secondary';}?>">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#<?php echo $pageLabel; ?>"/></svg>
+                <?php echo $pageLabel; ?>
+              </a>
+            </li> 
+                                </ul>
+            </li>
+            
+
           </ul>
         </div>
       </div>

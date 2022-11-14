@@ -42,6 +42,7 @@ if(isset($_GET['page'])){
         include('pages/details.php');
 
     }elseif($page_name=='Orders'){
+        $products=$product->home();
         include('pages/order.php');
         
     }elseif($page_name=='Categories'){ /** Products By Category */
@@ -57,6 +58,7 @@ if(isset($_GET['page'])){
         include('pages/productByBrand.php');
 
     }elseif($page_name=='Customer'){
+        $products=$product->home();
         include('pages/customer.php');
         
     }else{
