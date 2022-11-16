@@ -1,0 +1,14 @@
+composer create-project laravel/laravel test_project
+php artisan make:controller HomeController
+php artisan make:controller ProductController
+php artisan make:controller BrandController
+php artisan make:controller CategoryController
+
+php artisan make:model Product
+php artisan make:model Brand
+php artisan make:model Category
+
+php artisan serv
+
+*** ---- Required Command to run ------- ***
+1. Composer install
