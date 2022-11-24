@@ -1,0 +1,58 @@
+  /* Typewriter effect 1 */
+  @keyframes typing {
+    0.0000%, 27.3488% { content: ""; }
+    1.1395%, 26.2093% { content: "B"; }
+    2.2791%, 25.0698% { content: "BI"; }
+    3.4186%, 23.9302% { content: "BIT"; }
+    4.5581%, 22.7907% { content: "BITM"; }
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .typewriter {
+    --caret: currentcolor;
+  }
+  
+  .typewriter::before {
+    content: "";
+    animation: typing 13.5s infinite;
+  }
+  
+  .typewriter::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 0.5s linear infinite;
+  }
+  
+  .typewriter.thick::after {
+    border-right: 1ch solid var(--caret);
+  }
+  
+  .typewriter.nocaret::after {
+    border-right: 0;
+  }
+  
+  
+  @media (prefers-reduced-motion) {
+    .typewriter::after {
+      animation: none;
+    }
+    
+    @keyframes sequencePopup {
+      0%, 100% { content: "BITM"; }
+      25% { content: "BITM"; }
+      50% { content: "BITM"; }
+      75% { content: "BITM"; }
+    }
+  
+    .typewriter::before {
+      content: "BITM";
+      animation: sequencePopup 12s linear infinite;
+    }
+  }
+  
+  /**/
+  
