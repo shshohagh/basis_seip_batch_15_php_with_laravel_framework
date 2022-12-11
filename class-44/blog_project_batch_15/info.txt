@@ -1,0 +1,31 @@
+composer create-project laravel/laravel blog_project_batch_15
+
+php artisan make:model Modelname -m
+php artisan make:controller ControllerName
+php artisan make:migration create_table_tablesname
+
+php arisan make:model Model -mc
+
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+npm install
+npm run build
+php artisan migrate
+
+{{route('login')}}
+{{route('logout')}}
+{{route('profile.view')}}
+{{route('profile')}}
+
+"{{asset('frontEnd')}}/assets/
+"{{asset('admin')}}/assets/
+{{route('')}}
+
+Blog table column name: category, author, title, slug, description, image, status, popular, trending, latest, date
+Button:
+Tending- mostly visit
+Pupular- mostly liked
+Latest- Recently post
+
+Category field name: category_name, status
+Author field name: author_name, status
