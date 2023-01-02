@@ -28,7 +28,7 @@
             <hr/>
             <h6 class="mb-0">Header Colors</h6>
             <hr/>
-<!--             <div class="header-colors-indigators">
+            <div class="header-colors-indigators">
               <div class="row row-cols-auto g-3">
                 <div class="col">
                   <div class="indigator headercolor1" id="headercolor1"></div>
@@ -55,7 +55,7 @@
                   <div class="indigator headercolor8" id="headercolor8"></div>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
        </div>

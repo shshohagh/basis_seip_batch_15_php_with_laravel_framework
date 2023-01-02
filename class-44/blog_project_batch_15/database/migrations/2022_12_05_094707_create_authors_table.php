@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('author_name',50);
             $table->text('author_image')->nullable();
+            $table->string('author_designation',50)->nullable();
+            $table->text('author_details')->nullable();
             $table->tinyInteger('status')->default(1)->comment('1=published, 0=Unpublished');
             $table->timestamps();
         });

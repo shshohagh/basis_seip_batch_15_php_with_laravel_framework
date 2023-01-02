@@ -10,7 +10,7 @@ Blog Details
 
             <!-- ======= Single Post Content ======= -->
             <div class="single-post">
-              <div class="post-meta"><span class="date">{{$blog->category_name}}</span> <span class="mx-1">&bullet;</span> <span>{{$blog->date}}</span></div>
+              <div class="post-meta"><span class="date">{{$blog->category_name}}</span> <span class="mx-1">&bullet;</span> <span>{{ date("M jS 'y",strtotime($blog->date)) }}</span></div>
               <h1 class="mb-5">{{$blog->title}}</h1>
               <p><span class="firstcharacter">{{substr($blog->description,0,1)}}</span>{{substr($blog->description,1,200)}}</p>
 
@@ -23,7 +23,8 @@ Blog Details
 
             <!-- ======= Comments ======= -->
             <div class="comments">
-              <h5 class="comment-title py-4">2 Comments</h5>
+              <h5 class="comment-title py-4">{{count($comments)}} Comments</h5>
+              @foreach($comments as $comment)
               <div class="comment d-flex mb-4">
                 <div class="flex-shrink-0">
                   <div class="avatar avatar-sm rounded-circle">
@@ -32,13 +33,11 @@ Blog Details
                 </div>
                 <div class="flex-grow-1 ms-2 ms-sm-3">
                   <div class="comment-meta d-flex align-items-baseline">
-                    <h6 class="me-2">Jordan Singer</h6>
-                    <span class="text-muted">2d</span>
+                    <h6 class="me-2">{{$comment->name}}</h6>
+                    <span class="text-muted">{{ date("M jS 'y, g:i a",strtotime($comment->created_at)) }}</span>
                   </div>
-                  <div class="comment-body">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non minima ipsum at amet doloremque qui magni, placeat deserunt pariatur itaque laudantium impedit aliquam eligendi repellendus excepturi quibusdam nobis esse accusantium.
-                  </div>
-
+                  <div class="comment-body">{{$comment->comment}}</div>
+                    @if($reply>0)
                   <div class="comment-replies bg-light p-3 mt-3 rounded">
                     <h6 class="comment-replies-title mb-4 text-muted text-uppercase">2 replies</h6>
 
@@ -75,9 +74,11 @@ Blog Details
                       </div>
                     </div>
                   </div>
+                    @endif
                 </div>
               </div>
-              <div class="comment d-flex">
+              @endforeach
+              <div class="comment d-flex d-none">
                 <div class="flex-shrink-0">
                   <div class="avatar avatar-sm rounded-circle">
                     <img class="avatar-img" src="{{ asset('frontEnd') }}/assets/img/person-2.jpg" alt="" class="img-fluid">
@@ -96,31 +97,58 @@ Blog Details
             </div><!-- End Comments -->
 
             <!-- ======= Comments Form ======= -->
+            @if(Session::get('userId'))
             <div class="row justify-content-center mt-5">
 
+            <div class="row justify-content-center mt-5">
+              @if($errors->any()>0)
+              <div class="alert alert-danger">
+                <ul>
+                  @foreach($errors->all() as $error)
+                  <li>{{ $error }}</li>
+                  @endforeach
+                </ul>
+              </div>
+              @endif
+            </div>
+              <form action="{{route('new.comment')}}" method="post">
+                @csrf
+                <input type="hidden" name="user_id" value="{{ Session::get('userId')}} ">
+                <input type="hidden" name="blog_id" value="{{ $blog->id }}">
               <div class="col-lg-12">
                 <h5 class="comment-title">Leave a Comment</h5>
+                <div class="row mt-5">
+                <div class="comment d-flex">
+                <div class="flex-shrink-0">
+                  <div class="avatar avatar-sm rounded-circle">
+                    <img class="avatar-img" src="{{ asset('frontEnd') }}/assets/img/person-2.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+                <div class="flex-shrink-1 ms-2 ms-sm-3">
+                  <div class="comment-meta d-flex">
+                    <h6 class="me-2">{{ Session::get('userName') }}</h6>
+                  </div>
+                </div>
+              </div>
+                </div>
                 <div class="row">
-                  <div class="col-lg-6 mb-3">
-                    <label for="comment-name">Name</label>
-                    <input type="text" class="form-control" id="comment-name" placeholder="Enter your name">
-                  </div>
-                  <div class="col-lg-6 mb-3">
-                    <label for="comment-email">Email</label>
-                    <input type="text" class="form-control" id="comment-email" placeholder="Enter your email">
-                  </div>
                   <div class="col-12 mb-3">
                     <label for="comment-message">Message</label>
 
-                    <textarea class="form-control" id="comment-message" placeholder="Enter your name" cols="30" rows="10"></textarea>
+                    <textarea class="form-control @error('comment') is-invalid @enderror" name="comment" placeholder="Enter your name" cols="30" rows="10"></textarea>
                   </div>
                   <div class="col-12">
                     <input type="submit" class="btn btn-primary" value="Post comment">
                   </div>
                 </div>
               </div>
-            </div><!-- End Comments Form -->
 
+              </form>
+
+            </div><!-- End Comments Form -->
+            @else
+            <h3 class="text-primary mt-5">>> Please <a href="{{route('user.login')}}" class="text-info">Login</a> For Comment.</h3>
+            @endif
           </div>
           <div class="col-md-3">
             <!-- ======= Sidebar ======= -->
@@ -138,8 +166,8 @@ Blog Details
                 <div class="tab-pane fade show active" id="pills-popular" role="tabpanel" aria-labelledby="pills-popular-tab">
                   @foreach($relateds as $related)
                   <div class="post-entry-1 border-bottom">
-                    <div class="post-meta"><span class="date">{{ $related->category_name }}</span> <span class="mx-1">&bullet;</span> <span>{{ $related->date }}</span></div>
-                    <h2 class="mb-2"><a href="{{route('blog.details',['slug'=>$related->slug])}}">{{ $related->title }}</a></h2>
+                    <div class="post-meta"><span class="date">{{ $related->category_name }}</span> <span class="mx-1">&bullet;</span> <span>{{ date("M jS 'y",strtotime($related->date)) }}</span></div>
+                    <h2 class="mb-2"><a href="{{route('blog.details',['slug'=>$related->slug])}}">{{ substr($related->title,0,30) }}</a></h2>
                     <span class="author mb-3 d-block">{{ $related->author_name }}</span>
                   </div>
                   @endforeach
@@ -161,18 +189,13 @@ Blog Details
             <div class="aside-block">
               <h3 class="aside-title">Categories</h3>
               <ul class="aside-links list-unstyled">
-                <li><a href="category.html"><i class="bi bi-chevron-right"></i> Business</a></li>
-                <li><a href="category.html"><i class="bi bi-chevron-right"></i> Culture</a></li>
-                <li><a href="category.html"><i class="bi bi-chevron-right"></i> Sport</a></li>
-                <li><a href="category.html"><i class="bi bi-chevron-right"></i> Food</a></li>
-                <li><a href="category.html"><i class="bi bi-chevron-right"></i> Politics</a></li>
-                <li><a href="category.html"><i class="bi bi-chevron-right"></i> Celebrity</a></li>
-                <li><a href="category.html"><i class="bi bi-chevron-right"></i> Startups</a></li>
-                <li><a href="category.html"><i class="bi bi-chevron-right"></i> Travel</a></li>
+                @foreach($categories as $category)
+                <li><a href="{{ route('blog.category',['catId'=>$category->id]) }}"><i class="bi bi-chevron-right"></i>  {{ $category->category_name }}</a></li>
+              @endforeach
               </ul>
             </div><!-- End Categories -->
 
-            <div class="aside-block">
+            <div class="aside-block d-none">
               <h3 class="aside-title">Tags</h3>
               <ul class="aside-tags list-unstyled">
                 <li><a href="category.html">Business</a></li>

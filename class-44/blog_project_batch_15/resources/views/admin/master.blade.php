@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="minimal-theme">
+<html lang="en" class="{{$settings->theme_color}} {{$settings->header_color}}">
   <!-- minimal-theme, dark-theme, semi-dark / color-header headercolor1 - 7 -->
 <head>
   <!-- Required meta tags -->
@@ -78,10 +78,11 @@
   <!--app-->
   <script src="{{ asset('admin') }}/assets/js/app.js"></script>
   <script src="{{ asset('admin') }}/assets/js/index.js"></script>
+  <script src="{{ asset('admin') }}/assets/js/validation.js"></script>
   @yield('js')
   <script>
      new PerfectScrollbar(".best-product")
-     new PerfectScrollbar(".top-sellers-list")
+     new PerfectScrollbar(".top-sellers-list")   
   </script>
 </body>
 </html>

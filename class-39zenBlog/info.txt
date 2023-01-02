@@ -1,0 +1,13 @@
+composer create-project laravel/laravel zenBlog
+
+php artisan make:model Modelname -m
+php artisan make:controller ControllerName
+php artisan make:migration create_table_tablesname
+
+php arisan make:model Model -mc
+
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+npm install
+npm run build
+php artisan migrate

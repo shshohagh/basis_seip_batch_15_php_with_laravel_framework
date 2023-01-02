@@ -12,19 +12,27 @@ Category
 										<h5 class="mb-0">Add New Category</h5>
 									</div>
 									<hr/>
-									<form action="{{route('category.new')}}" method="post" enctype="multipart/form-data">
+									<form id="catForm" action="{{route('category.new')}}" method="post" enctype="multipart/form-data">
                                         @csrf
                                     <div class="row mb-3">
 										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Enter Category Name</label>
 										<div class="col-sm-9">
-											<input type="text" name="category_name" class="form-control" id="inputEnterCategoryName" placeholder="Enter Category Name"  required>
+											<input type="text" name="category_name" class="form-control mb-2" id="category" placeholder="Enter Category Name"  required>
+											<span id="errorMessage" class="text-danger"></span>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Enter Category Code</label>
+										<div class="col-sm-9">
+											<input type="text" name="category_code" class="form-control mb-2" id="categoryCode" placeholder="Enter Category Code"  required>
+											<span id="errorMessageCode" class="text-danger"></span>
 										</div>
 									</div>
 									
 									<div class="row">
 										<label class="col-sm-3 col-form-label"></label>
 										<div class="col-sm-9">
-											<button type="submit" class="btn btn-primary px-5">Submit</button>
+											<button type="submit" id="catBtn" class="btn btn-primary px-5">Submit</button>
 										</div>
 									</div>
                                     </form>

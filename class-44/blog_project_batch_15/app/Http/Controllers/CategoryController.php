@@ -15,7 +15,7 @@ class CategoryController extends Controller
     }
     public function saveCategory(Request $request){
         Category::saveCategory($request);
-        return redirect(route('category'));
+        return redirect(route('admin.category'));
     }
     public function editCategory(Request $request){
         return view('admin.category.category-edit',[
@@ -30,6 +30,6 @@ class CategoryController extends Controller
             }
         }
         $this->category->delete();
-        return redirect(route('category'));
+        return redirect(route('admin.category'));
     }
 }

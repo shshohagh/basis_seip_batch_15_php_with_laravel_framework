@@ -12,9 +12,9 @@ class Blog extends Model
     private static $blog, $image, $imageName, $directory, $imageUrl, $slug;
 
     public static function saveBlog($request){
-        if($request->blog_id){
+        if($request->blog_id){  // when edit
             self::$blog = Blog::find($request->blog_id);
-        }else{
+        }else{  // when save
             self::$blog = new Blog();
         }
         self::$blog->category_id = $request->category_id;
@@ -23,11 +23,12 @@ class Blog extends Model
         self::$blog->slug = self::makeSlug($request);
         self::$blog->description = $request->description;
         if($request->file('image')){
-            if($request->blog_id){
+            if($request->blog_id){ // when edit
                 if(file_exists(self::$blog->image)){
                     unlink(self::$blog->image);
                 }
             }
+             // when save
             self::$blog->image = self::saveImage($request);
         }
         self::$blog->date = $request->date;
@@ -48,9 +49,9 @@ class Blog extends Model
             self::$slug = $request->slug;
             return preg_replace('/\s+/u','-',trim(self::$slug));
         }else{
-            self::$slug = $request->title;
             return preg_replace('/\s+/u','-',trim(self::$slug));
         }
+        //self::$blog = Blog::where();
     }
 
 }

@@ -78,42 +78,14 @@ About
               </div>
             </div>
           </div>
+          @foreach($authors as $author)
           <div class="col-lg-4 text-center mb-5">
-            <img src="{{ asset('frontEnd') }}/assets/img/person-1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4">
-            <h4>Cameron Williamson</h4>
-            <span class="d-block mb-3 text-uppercase">Founder &amp; CEO</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+            <img src="{{ asset($author->author_image) }}" alt="" class="img-fluid rounded-circle w-50 mb-4">
+            <h4>{{ $author->author_name }}</h4>
+            <span class="d-block mb-3 text-uppercase">{{ $author->author_designation }}</span>
+            <p>{{ $author->author_details }}</p>
           </div>
-          <div class="col-lg-4 text-center mb-5">
-            <img src="{{ asset('frontEnd') }}/assets/img/person-2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4">
-            <h4>Wade Warren</h4>
-            <span class="d-block mb-3 text-uppercase">Founder, VP</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
-          </div>
-          <div class="col-lg-4 text-center mb-5">
-            <img src="{{ asset('frontEnd') }}/assets/img/person-3.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4">
-            <h4>Jane Cooper</h4>
-            <span class="d-block mb-3 text-uppercase">Editor Staff</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
-          </div>
-          <div class="col-lg-4 text-center mb-5">
-            <img src="{{ asset('frontEnd') }}/assets/img/person-4.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4">
-            <h4>Cameron Williamson</h4>
-            <span class="d-block mb-3 text-uppercase">Editor Staff</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
-          </div>
-          <div class="col-lg-4 text-center mb-5">
-            <img src="{{ asset('frontEnd') }}/assets/img/person-5.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4">
-            <h4>Cameron Williamson</h4>
-            <span class="d-block mb-3 text-uppercase">Editor Staff</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
-          </div>
-          <div class="col-lg-4 text-center mb-5">
-            <img src="{{ asset('frontEnd') }}/assets/img/person-6.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4">
-            <h4>Cameron Williamson</h4>
-            <span class="d-block mb-3 text-uppercase">Editor Staff</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime, adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
-          </div>
+          @endforeach
         </div>
       </div>
     </section>

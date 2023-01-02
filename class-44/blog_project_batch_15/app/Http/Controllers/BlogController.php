@@ -26,6 +26,7 @@ class BlogController extends Controller
         ->join('categories','blogs.category_id','=','categories.id')
         ->join('authors','blogs.author_id','=','authors.id')
         ->select('blogs.*','categories.category_name','authors.author_name')
+        ->orderBy('id','desc')
         ->get();
         return view('admin.blog.blog-manage',[
             'blogs'=> $this->blog

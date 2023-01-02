@@ -1,0 +1,23 @@
+composer create-project laravel/laravel ecommerce_batch_15
+cd ecommerce_batch_15
+
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+npm install
+npm run build
+php artisan migrate
+
+php artisan make:model ModelName
+php artisan make:controller ControllerName
+php artisan make:migration create_table_tablesname
+php artisan make:model ModelName -m
+php artisan make:model ModelName -mc
+
+{{ route('login') }}
+{{ route('logout') }}
+{{ route('profile.view') }}
+{{ route('profile') }}
+
+"{{asset('frontEnd')}}/assets/
+"{{asset('admin')}}/assets/
+{{ route('') }}

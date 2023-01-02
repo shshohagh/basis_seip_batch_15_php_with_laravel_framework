@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ZenBlogController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SettingController;
@@ -20,10 +22,21 @@ use App\Http\Controllers\SettingController;
 
 Route::get('/', [ZenBlogController::class, 'index'])->name('home');
 Route::get('/blog', [ZenBlogController::class, 'blog'])->name('blog');
-Route::get('/blog-details/{slug}', [ZenBlogController::class, 'details'])->name('blog.details');
-Route::get('/blog-category', [ZenBlogController::class, 'category'])->name('blog.category');
+Route::get('/blog-category/{catId}', [ZenBlogController::class, 'category'])->name('blog.category');
 Route::get('/about', [ZenBlogController::class, 'about'])->name('about');
 Route::get('/contact', [ZenBlogController::class, 'contact'])->name('contact');
+
+Route::get('/user-login',[ZenBlogController::class, 'userLogin'])->name('user.login');
+Route::post('/user-login',[ZenBlogController::class, 'loginUser'])->name('user.login');
+Route::get('/user-logout',[ZenBlogController::class, 'logoutUser'])->name('user.logout');
+Route::get('/user-register',[ZenBlogController::class, 'userRegister'])->name('user.register');
+Route::post('/user-register',[ZenBlogController::class, 'saveUser'])->name('user.register');
+
+Route::group(['middleware'=>'blogUser'], function(){
+    Route::get('/blog-details/{slug}', [ZenBlogController::class, 'details'])->name('blog.details');
+    Route::post('/new-comment', [CommentController::class, 'saveComment'])->name('new.comment');
+    
+});
 
 Route::middleware([
     'auth:sanctum',
@@ -31,15 +44,16 @@ Route::middleware([
     'verified'
 ])->group(function () {
 
-    Route::get('/dashboard', function () {
+/*     Route::get('/dashboard', function () {
         return view('dashboard');
-    })->name('dashboard');
+    })->name('dashboard'); */
 
     Route::get('/page', [DashboardController::class, 'page'])->name('page');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/profile', [DashboardController::class, 'profile'])->name('profile');
 
     Route::get('/category', [CategoryController::class, 'index'])->name('admin.category');
+    Route::get('/sub-category', [SubCategoryController::class, 'index'])->name('admin.sub.category');
     Route::post('/category-new', [CategoryController::class, 'saveCategory'])->name('category.new');
     Route::post('/category-edit', [CategoryController::class, 'editCategory'])->name('category.edit');
     Route::post('/category-delete', [CategoryController::class, 'deleteCategory'])->name('category.delete');

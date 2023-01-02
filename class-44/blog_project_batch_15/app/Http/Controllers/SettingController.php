@@ -10,10 +10,12 @@ class SettingController extends Controller
     public $setting;
 
     public function index(){
-       return view('admin.setting.setting');
+       return view('admin.setting.setting',[
+        'settings' => Setting::first()
+       ]);
     }
     public function saveSetting(Request $request){
-        $this->setting = new Setting();
+        $this->setting = Setting::find(1);
         $this->setting->theme_color = $request->theme_color;
         $this->setting->header_color = $request->header_color;
         $this->setting->save();

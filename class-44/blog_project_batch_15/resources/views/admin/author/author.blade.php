@@ -4,7 +4,7 @@ Author
 @endsection
 @section('content')
 <div class="row">
-					<div class="col-xl-9 mx-auto">
+					<div class="col-xl-12 mx-auto">
 						<div class="card">
 							<div class="card-body">
 								<div class="border p-4 rounded">
@@ -18,6 +18,18 @@ Author
 										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Enter Author Name</label>
 										<div class="col-sm-9">
 											<input type="text" name="author_name" class="form-control" id="inputEnterAuthorName" placeholder="Enter Author Name">
+										</div>
+									</div>
+                                    <div class="row mb-3">
+										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Enter Author Designation</label>
+										<div class="col-sm-9">
+											<input type="text" name="author_designation" class="form-control" id="inputEnterAuthorName" placeholder="Enter Author Designation">
+										</div>
+									</div>
+                                    <div class="row mb-3">
+										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Enter Author Details</label>
+										<div class="col-sm-9">
+											<textarea name="author_details" id="" cols="30" rows="5" class="form-control"></textarea>
 										</div>
 									</div>
                                     <div class="row mb-3">
@@ -39,7 +51,7 @@ Author
 					</div>
 				</div>
                 <div class="row">
-					<div class="col-xl-9 mx-auto">
+					<div class="col-xl-12 mx-auto">
 						<div class="card">
 							<div class="card-body">
 								<div class="border p-4 rounded">
@@ -51,7 +63,9 @@ Author
                                         <tr>
                                             <th>Sl</th>
                                             <th>Image</th>
-                                            <th>Author Name</th>
+                                            <th>Name</th>
+                                            <th>Designation</th>
+                                            <th>Details</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
@@ -61,6 +75,8 @@ Author
                                             <td>{{ $sn++ }}</td>
                                             <td><img src="{{ asset($author->author_image) }}" alt="" class="img-fluid h-25 rounded-circle"></td>
                                             <td>{{ $author->author_name }}</td>
+                                            <td>{{ $author->author_designation }}</td>
+                                            <td>{{ $author->author_details }}</td>
                                             <td>{{ $author->status==1 ? 'Publised':'Unpublished' }} </td>
                                             <td>
                                             <table>

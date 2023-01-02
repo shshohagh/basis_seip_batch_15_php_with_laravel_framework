@@ -78,6 +78,7 @@ Blog
                                                 <option value="popular">Popular</option>
                                                 <option value="trending">Tranding</option>
                                                 <option value="latest">Latest</option>
+                                                <option value="slide">Slide</option>
                                             </select>
 										</dive>
 									</div>

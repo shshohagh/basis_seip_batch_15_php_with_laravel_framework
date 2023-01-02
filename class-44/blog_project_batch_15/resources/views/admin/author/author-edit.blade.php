@@ -22,6 +22,18 @@ Author
 										</div>
 									</div>
 									<div class="row mb-3">
+										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Enter Author Designation</label>
+										<div class="col-sm-9">
+											<input type="text" name="author_designation" value="{{$author->author_designation}}" class="form-control" id="inputEnterAuthorName" placeholder="Enter Author Designation">
+										</div>
+									</div>
+                                    <div class="row mb-3">
+										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Enter Author Details</label>
+										<div class="col-sm-9">
+											<textarea name="author_details" id="" cols="30" rows="5" class="form-control">{{$author->author_details}}</textarea>
+										</div>
+									</div>
+									<div class="row mb-3">
 										<div class="col-sm-12">
 										<img src="{{ asset($author->author_image) }}" alt="" class="img-fluid">
 										</div>
@@ -29,7 +41,7 @@ Author
 									<div class="row mb-3">
 										<label for="inputEnterYourName" class="col-sm-3 col-form-label">Image</label>
 										<div class="col-sm-9">
-											<input type="file" name="image" class="form-control" required>
+											<input type="file" name="image" class="form-control">
 										</div>
 									</div>
 									<div class="row">

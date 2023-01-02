@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Product Details Image Plugin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-image">
+    <img id="mainImage" src="img/1.jpg" alt="1" title="1">
+</div>
+<div class="sub-image">
+    <img class="subImage" src="img/2.jpg" alt="2" title="2">
+    <img class="subImage" src="img/3.jpg" alt="3" title="3">
+    <img class="subImage" src="img/4.jpg" alt="4" title="4">
+    <img class="subImage" src="img/5.jpg" alt="5" title="5">
+    <img class="subImage" src="img/6.jpg" alt="6" title="6">
+    <img class="subImage" src="img/1.jpg" alt="1" title="1">
+ </div>
+ 
+ <script src="jquery.min.js"></script>   
+ <script>
+    $('.subImage').click(function(){
+        var subImage = $(this).attr('src');
+        $('#mainImage').attr('src',subImage)
+
+        var subImageTitle = $(this).attr('title');
+        $('#mainImage').attr('title',subImageTitle)
+    })
+ </script>   
+</body>
+</html>

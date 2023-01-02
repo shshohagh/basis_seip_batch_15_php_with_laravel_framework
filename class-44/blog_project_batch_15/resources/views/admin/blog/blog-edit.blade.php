@@ -82,6 +82,7 @@ Blog
                                                 <option {{$blog->blog_type=='popular' ? 'selected':''}} value="popular">Popular</option>
                                                 <option {{$blog->blog_type=='trending' ? 'selected':''}} value="trending">Tranding</option>
                                                 <option {{$blog->blog_type=='latest' ?  'selected':''}} value="latest">Latest</option>
+                                                <option {{$blog->blog_type=='slide' ?  'selected':''}} value="slide">Slide</option>
                                             </select>
 										</dive>
 									</div>

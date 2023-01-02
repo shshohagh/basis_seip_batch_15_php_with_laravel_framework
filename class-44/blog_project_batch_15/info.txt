@@ -1,10 +1,10 @@
 composer create-project laravel/laravel blog_project_batch_15
 
 php artisan make:model Modelname -m
-php artisan make:controller ControllerName
+php artisan make:controller EcommerceController
 php artisan make:migration create_table_tablesname
 
-php arisan make:model Model -mc
+php artisan make:model Model -mc
 
 composer require laravel/jetstream
 php artisan jetstream:install livewire

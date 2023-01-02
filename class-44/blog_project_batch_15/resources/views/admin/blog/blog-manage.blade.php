@@ -43,9 +43,14 @@ Blog
                                                 <td>{{ $blog->date }}</td>
                                                 <td>
     
-                                                    @if($blog->blog_type=='popular') Popular
-                                                    @elseif($blog->blog_type=='trending') Trending
-                                                    @elseif($blog->blog_type=='latest') Latest
+                                                    @if($blog->blog_type=='popular') 
+                                                    <span class="text-info"> Popular</span> 
+                                                    @elseif($blog->blog_type=='trending') 
+                                                    <span class="text-success"> Trending</span> 
+                                                    @elseif($blog->blog_type=='latest') 
+                                                    <span class="text-danger"> Latest</span>
+                                                    @elseif($blog->blog_type=='slide') 
+                                                    <span class="text-primary"> Slide</span> 
                                                     @endif
     
                                                 </td>

@@ -18,6 +18,8 @@ class Author extends Model
             self::$author = new Author();
         }
         self::$author->author_name = $request->author_name;
+        self::$author->author_designation = $request->author_designation;
+        self::$author->author_details = $request->author_details;
         if($request->file('image')){
             if($request->author_id){
                 if(file_exists(self::$author->author_image)){

@@ -1,0 +1,14 @@
+.main-image img{
+    height: 500px;
+    width: 500px;
+    border: 1px solid rgb(34, 178, 192);
+    box-shadow: 20px rgb(58, 47, 47);
+    border-radius: 10px;
+}
+.sub-image img{
+    height: 100px;
+    border: 1px solid rgb(207, 199, 199);
+    box-shadow: 20px rgb(58, 47, 47);
+    border-radius: 10px;
+    
+}

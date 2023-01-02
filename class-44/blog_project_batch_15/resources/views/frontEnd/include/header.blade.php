@@ -11,27 +11,23 @@
         <ul>
           <li><a href="{{route('blog')}}">Blog</a></li>
    
-          <li class="dropdown"><a href="{{route('blog.category')}}"><span>Categories</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="{{route('blog.category')}}">Search Result</a></li>
-              <li><a href="{{route('blog.category')}}">Drop Down 1</a></li>
-              <li class="dropdown"><a href="{{route('blog.category')}}"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="{{route('blog.category')}}">Deep Drop Down 1</a></li>
-                  <li><a href="{{route('blog.category')}}">Deep Drop Down 2</a></li>
-                  <li><a href="{{route('blog.category')}}">Deep Drop Down 3</a></li>
-                  <li><a href="{{route('blog.category')}}">Deep Drop Down 4</a></li>
-                  <li><a href="{{route('blog.category')}}">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="{{route('blog.category')}}">Drop Down 2</a></li>
-              <li><a href="{{route('blog.category')}}">Drop Down 3</a></li>
-              <li><a href="{{route('blog.category')}}">Drop Down 4</a></li>
+          <li class="dropdown"><a href="#"><span>Categories</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul> <!-- From App Service Provider -->
+             @foreach($categories as $category)
+                <li><a href="{{ route('blog.category',['catId'=>$category->id]) }}"> {{ $category->category_name }}</a></li>
+              @endforeach
             </ul>
           </li>
 
           <li><a href="{{route('about')}}">About</a></li>
           <li><a href="{{route('contact')}}">Contact</a></li>
+          @if(Session::get('userId'))
+          <li><a href="#"><b>{{Session::get('userName')}}</b></a></li>
+          <li><a href="{{route('user.logout')}}"><b>Logout</b></a></li>
+          @else
+          <li><a href="{{route('user.login')}}"><b>Login</b></a></li>
+          <li><a href="{{route('user.register')}}"><strong>Signup</strong></a></li>
+          @endif
         </ul>
       </nav><!-- .navbar -->
 
